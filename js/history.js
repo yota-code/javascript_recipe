@@ -128,7 +128,7 @@ class HistoryEngine {
 	apply() {
 		// appelle tous les callback enregistrés, pour rafraichir la page
 
-		var change = new this.change(this);
+		var change = new HistoryEngine.change(this);
 
 		for ( let callback of this.callback_lst ) {
 			callback(change);
@@ -204,8 +204,8 @@ HistoryEngine.change = class {
 	}
 }
 
-var hist = new HistoryEngine();
+var histe = new HistoryEngine();
 
 window.onpopstate = function(event) {
-	hist.pop(event.target.location);
+	histe.pop(event.target.location);
 }
