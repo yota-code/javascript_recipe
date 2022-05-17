@@ -102,7 +102,6 @@ Object.defineProperty(Element.prototype, "grow", {
 function prom_get(url) {
 	// Return a new promise.
 	return new Promise( function(resolve, reject) {
-
 		// Do the usual XHR stuff
 		var req = new XMLHttpRequest();
 		req.open('GET', url);
@@ -122,7 +121,7 @@ function prom_get(url) {
 
 		// Handle network errors
 		req.onerror = function() {
-			reject(Error("Network Error"));
+			reject( Error("Network Error") );
 		};
 
 		// Make the request
