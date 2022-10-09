@@ -1,7 +1,6 @@
 
 /// String
 
-
 Object.defineProperty(String.prototype, "format", {
 	// can be replaced by the new syntax
 	value: function() {
